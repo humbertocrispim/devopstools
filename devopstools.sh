@@ -1,26 +1,34 @@
 #! /bin/bash
 ## user-data: Criando ambiente DevOps - Distro Ubuntu 22.04 LTS
 ## By Rodrigo César Assis
-USER="ubuntu"   # change-me
 
-echo "
-### DevOps Tools - Install ###
+function function10(){
 
-ATENÇÃO! Antes de qualquer instalação, atualize os pacotes por pelo menos UMA vez (Opção 0)!
-- Baseado nas documentações oficiais.
+    USER="ubuntu"   # change-me
 
-0. Atualizar pacotes
-1. Docker
-2. Docker Compose
-3. Git
-4. Ansible
-5. Terraform
-6. AWS CLI
-7. Todas 
-00. Limpar lixo de pacotes
+    echo "
+    ### DevOps Tools - Install ###
 
-Digite o software que deseja instalar: "
-read tool
+    ATENÇÃO! Antes de qualquer instalação, atualize os pacotes por pelo menos UMA vez (Opção 0)!
+    - Baseado nas documentações oficiais.
+
+    0. Atualizar pacotes
+    1. Docker
+    2. Docker Compose
+    3. Git
+    4. Ansible
+    5. Terraform
+    6. AWS CLI
+    7. Todas 
+    00. Limpar lixo de pacotes
+
+    Digite o software que deseja instalar: "
+    read tool
+        
+
+}
+
+#
 
 function0(){
     echo "### Atualizando pacotes... ###"
@@ -119,6 +127,8 @@ function00()
     sudo apt clean
     echo -e "\nFinalizando limpeza\n"
 }
+
+function10
 
 case $tool in 
     0)  function0 ;;
