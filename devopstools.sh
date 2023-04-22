@@ -56,7 +56,8 @@ function1()
     echo -e "\nInstall Docker Engine, containerd"
     sudo apt update
     sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin
-    sudo usermod -aG docker $USER
+    sudo groupadd docker && sudo usermod -aG docker $USER
+    sudo newgrp docker
     echo -e "\nFinalizando instalacao do DOCKER\n"
     echo "-------------------------//-------------------------"
 }
