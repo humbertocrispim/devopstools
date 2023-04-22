@@ -58,6 +58,7 @@ function1()
     sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin
     sudo groupadd docker && sudo usermod -aG docker $USER
     sudo newgrp docker
+    function10
     echo -e "\nFinalizando instalacao do DOCKER\n"
     echo "-------------------------//-------------------------"
 }
